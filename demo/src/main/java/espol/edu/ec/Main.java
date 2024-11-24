@@ -39,5 +39,19 @@ public class Main {
         ActividadFisicaVista actividadVista = new ActividadFisicaVista(actividadControlador);
 
         actividadVista.mostrarMenu();
+
+        CitaMedicaControlador citaControlador = new CitaMedicaControlador();
+        CitaMedicaVista citaVista = new CitaMedicaVista(citaControlador);
+
+        MedicoControlador medicoControlador = new MedicoControlador();
+        MedicoVista medicoVista = new MedicoVista(medicoControlador);
+
+        medicoVista.mostrarMenu();
+
+        MedicamentoControlador medicamentoControlador = new MedicamentoControlador();
+        MedicamentoVista medicamentoVista = new MedicamentoVista(medicamentoControlador);
+
+        medicamentoVista.mostrarMenu();
+
     }
 }

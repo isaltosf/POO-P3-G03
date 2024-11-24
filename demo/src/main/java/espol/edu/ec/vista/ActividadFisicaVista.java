@@ -1,7 +1,7 @@
 package espol.edu.ec.vista;
 
 import espol.edu.ec.controlador.*;
-import espol.edu.ec.modelo.ActividadFisica;
+import espol.edu.ec.modelo.*;
 import java.util.Scanner;
 
 public class ActividadFisicaVista {
