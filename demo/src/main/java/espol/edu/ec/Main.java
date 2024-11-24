@@ -35,6 +35,9 @@ public class Main {
 
         } while (opcion !=3);
 
-    
+        ActividadFisicaControlador actividadControlador = new ActividadFisicaControlador();
+        ActividadFisicaVista actividadVista = new ActividadFisicaVista(actividadControlador);
+
+        actividadVista.mostrarMenu();
     }
 }
