@@ -21,7 +21,7 @@ public class Perfil {
     public String getRelacion() {
         return relacion;
     }
-  
+
     public String getEmail() {
         return email;
     }
@@ -30,6 +30,10 @@ public class Perfil {
         return codigo;
     }
 
-  
-   
+    @Override
+    public String toString() {
+        return "Perfil [nombre=" + nombre + ", relacion=" + relacion + ", email=" + email + ", codigo=" + codigo + "]";
+    }
+
+
 }

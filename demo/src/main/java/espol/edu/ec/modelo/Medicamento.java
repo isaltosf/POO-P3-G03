@@ -59,8 +59,6 @@ public class Medicamento {
     // Representación en texto
     @Override
     public String toString() {
-        return "ID: " + id + ", Nombre: " + nombre + ", Presentación: " + presentacion +
-               ", Cantidad: " + cantidad + ", Frecuencia: " + frecuencia +
-               ", Horas de Toma: " + horasToma + ", Dosis: " + dosis;
+        return "ID: " + id + ", Nombre: " + nombre + ", Presentación: " + presentacion + ", Cantidad: " + cantidad + ", Frecuencia: " + frecuencia + ", Horas de Toma: " + horasToma + ", Dosis: " + dosis;
     }
 }

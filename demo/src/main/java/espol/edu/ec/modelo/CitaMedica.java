@@ -1,5 +1,5 @@
 package espol.edu.ec.modelo;
-
+import java.util.*;
 
 public class CitaMedica {
     private static int contador = 0; // Contador para IDs únicos

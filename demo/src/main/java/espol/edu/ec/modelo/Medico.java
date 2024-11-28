@@ -47,7 +47,6 @@ public class Medico {
     // Representación en texto
     @Override
     public String toString() {
-        return "ID: " + id + ", Nombre: " + nombre + ", Especialidad: " + especialidad + 
-               ", Teléfono: " + telefono + ", Email: " + email + ", Dirección: " + direccion;
+        return "ID: " + id + ", Nombre: " + nombre + ", Especialidad: " + especialidad + ", Teléfono: " + telefono + ", Email: " + email + ", Dirección: " + direccion;
     }
 }
