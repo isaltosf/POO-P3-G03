@@ -20,7 +20,7 @@ public class ControladorPerfil {
         if (buscarPerfilPorNombre(nombre) == null) {
             Perfil nuevoPerfil = new Perfil(nombre, relacion, email);
             listaPerfiles.add(nuevoPerfil);
-            return null; 
+            return new MensajeUsuario("Agregar perfil", "Perfil agregado correctamente.");
         }
         return new MensajeUsuario("Agregar perfil", "El perfil " + nombre + " ya existe.");
     }

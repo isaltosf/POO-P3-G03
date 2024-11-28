@@ -4,7 +4,7 @@ import java.util.*;
 import espol.edu.ec.modelo.Medico;
 import espol.edu.ec.vista.*;
 public class MedicoControlador {
-    private List<Medico> medicos;
+    private ArrayList<Medico> medicos;
 
     public MedicoControlador() {
         medicos = new ArrayList<>();

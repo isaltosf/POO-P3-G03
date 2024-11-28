@@ -1,20 +1,21 @@
 package espol.edu.ec.modelo;
 
+import java.util.Date;
+
+
 public class ActividadFisica {
     private static int contador = 0; // Contador para IDs únicos
     private int id;
-    private String fecha; // Fecha en formato dd-MM-yyyy
+    private Date fecha; // Fecha en formato dd-MM-yyyy
     private String actividad; // Ahora es un String con valor predeterminado
     private int duracion; // Duración en minutos
-    private String horario; // Mañana, Tarde o Noche
+    private String horario;  //Ma;ana, Tarde o Noche
 
     // Constructor
-    public ActividadFisica(String fecha, int duracion, String horario) {
-        this.id = ++contador;
+    public ActividadFisica(Date fecha, String actividad, int duracion) {
         this.fecha = fecha;
-        this.actividad = "Caminar"; // Valor predeterminado
+        this.actividad = actividad;
         this.duracion = duracion;
-        this.horario = horario;
     }
 
     // Getters
@@ -22,7 +23,7 @@ public class ActividadFisica {
         return id;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
@@ -41,7 +42,6 @@ public class ActividadFisica {
     // Representación en texto
     @Override
     public String toString() {
-        return "ID: " + id + ", Fecha: " + fecha + ", Actividad: " + actividad +
-               ", Duración: " + duracion + " minutos, Horario: " + horario;
+        return "ID: " + id + ", Fecha: " + fecha + ", Actividad: " + actividad + ", Duración: " + duracion + " minutos, Horario: " + horario;
     }
 }

@@ -28,6 +28,14 @@ public class MedicamentoControlador {
         }
         return false;
     }
+    public Medicamento buscarMedicamentoPorId(int id){
+        for(Medicamento medicamento : medicamentos){
+            if(medicamento.getId() == id){
+                return medicamento;
+            }
+        }
+        return null;
+    }
 
     public boolean registrarToma(int id, int cantidadTomada) {
         for (Medicamento medicamento : medicamentos) {

@@ -8,31 +8,23 @@ import java.util.List;
 import espol.edu.ec.modelo.ActividadFisica;
 
 public class ActividadFisicaControlador {
-    private List<ActividadFisica> actividades;
+    private List<ActividadFisica> lstacActividadFisicas;
 
     public ActividadFisicaControlador() {
-        actividades = new ArrayList<>();
-        // Actividad inicial cargada por defecto
-        actividades.add(new ActividadFisica("22-11-2024", 30, "Mañana"));
+        lstacActividadFisicas = new ArrayList<>();
+        ordenarActividadesPorFecha();
     }
 
-    public void registrarActividad(String fecha, int duracion, String horario) {
-        actividades.add(new ActividadFisica(fecha, duracion, horario));
-        System.out.println("Actividad física registrada exitosamente.");
+    public void agregarActividad(ActividadFisica af){
+        lstacActividadFisicas.add(af);
     }
 
-    public List<ActividadFisica> listarActividades() {
-        return actividades; // Devuelve la lista de actividades registradas
+    private void ordenarActividadesPorFecha(){
+        lstacActividadFisicas.sort((a1,a2) -> a2.getFecha().compareTo(a1.getFecha()));
+
     }
 
-    public boolean validarFecha(String fecha) {
-        try {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-            LocalDate fechaIngresada = LocalDate.parse(fecha, formatter);
-            LocalDate fechaActual = LocalDate.now();
-            return !fechaIngresada.isAfter(fechaActual); // Valida que no sea futura
-        } catch (DateTimeParseException e) {
-            return false; // Fecha inválida si ocurre un error al parsear
-        }
+    public List<ActividadFisica> getActividadesOrdenadas(){
+        return lstacActividadFisicas;
     }
 }
