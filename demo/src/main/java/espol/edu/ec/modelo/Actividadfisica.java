@@ -1,8 +1,4 @@
 package espol.edu.ec.modelo;
-
-
-
-
 public class ActividadFisica {
     private static int contador = 0; // Contador para IDs únicos
     private int id;
