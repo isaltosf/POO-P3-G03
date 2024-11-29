@@ -1,10 +1,11 @@
 package espol.edu.ec.controlador;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import espol.edu.ec.modelo.*;
 import espol.edu.ec.vista.*;
 public class MedicamentoControlador {
-    private List<Medicamento> medicamentos;
+    private ArrayList<Medicamento> medicamentos;
 
     public MedicamentoControlador() {
         medicamentos = new ArrayList<>();
@@ -15,7 +16,7 @@ public class MedicamentoControlador {
         System.out.println("Medicamento añadido exitosamente.");
     }
 
-    public List<Medicamento> listarMedicamentos() {
+    public ArrayList<Medicamento> listarMedicamentos() {
         return medicamentos;
     }
 
