@@ -5,13 +5,14 @@ public class Perfil {
     private String relacion;
     private String email;
     private int codigo;
-    private static int codigoSecuencial;
+    private static int contador = 0; 
 
     public Perfil(String nombre, String relacion, String email) {
         this.nombre = nombre;
         this.relacion = relacion;
         this.email = email;
-        this.codigo = codigoSecuencial+1;
+        contador++;
+        this.codigo = codigo + contador;
     }
 
     public String getNombre() {
@@ -21,7 +22,7 @@ public class Perfil {
     public String getRelacion() {
         return relacion;
     }
-
+    
     public String getEmail() {
         return email;
     }
@@ -34,6 +35,5 @@ public class Perfil {
     public String toString() {
         return "Perfil [nombre=" + nombre + ", relacion=" + relacion + ", email=" + email + ", codigo=" + codigo + "]";
     }
-
-
+    
 }
