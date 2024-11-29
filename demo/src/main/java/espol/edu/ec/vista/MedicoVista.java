@@ -13,54 +13,8 @@ public class MedicoVista {
         this.controlador = controlador;
         this.scanner = new Scanner(System.in);
     }
-
-    public void MostrarMenuMedico() {
-        int opcion;
-        do {
-            System.out.println("\n--- Menú de Médicos ---");
-            System.out.println("1. Agregar Médico");
-            System.out.println("2. Listar Médicos");
-            System.out.println("3. Salir");
-            System.out.print("Seleccione una opción: ");
-            opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar buffer
-
-            switch (opcion) {
-                case 1:
-                    agregarMedico();
-                    break;
-                case 2:
-                    listarMedicos();
-                    break;
-                case 3:
-                    System.out.println("Saliendo del menú de médicos...");
-                    break;
-                default:
-                    System.out.println("Opción no válida. Intente de nuevo.");
-            }
-        } while (opcion != 3);
-    }
-
-    private void agregarMedico() {
-        System.out.print("\nIngrese el nombre del médico: ");
-        String nombre = scanner.nextLine();
-
-        System.out.print("Ingrese la especialidad del médico: ");
-        String especialidad = scanner.nextLine();
-
-        System.out.print("Ingrese el número de contacto del médico: ");
-        String telefono = scanner.nextLine();
-
-        System.out.print("Ingrese el correo electrónico del médico: ");
-        String email = scanner.nextLine();
-
-        System.out.print("Ingrese la dirección de la consulta médica: ");
-        String direccion = scanner.nextLine();
-
-        controlador.agregarMedico(nombre, especialidad, telefono, email, direccion);
-    }
-
     private void listarMedicos() {
+        // Obtener la lista de médicos del controlador
         ArrayList<Medico> medicos = controlador.listarMedicos();
         if (medicos.isEmpty()) {
             System.out.println("No hay médicos registrados.");
@@ -73,7 +27,45 @@ public class MedicoVista {
                 System.out.println("Email: " + medico.getEmail());
                 System.out.println("Dirección: " + medico.getDireccion());
                 System.out.println("----------------------------------");
+            }
         }
     }
-}
+
+    private void añadirMedico(){
+        System.out.println("\nIngrese el nombre del médico");
+        String nombre = scanner.nextLine();
+        System.out.print("Ingrese la especialidad del médico: ");
+        String especialidad = scanner.nextLine();
+        System.out.print("Ingrese el teléfono del médico: ");
+        String telefono = scanner.nextLine();
+        System.out.print("Ingrese el email del médico: ");
+        String email = scanner.nextLine();
+        System.out.print("Ingrese la dirección del médico: ");
+        String direccion = scanner.nextLine();
+
+        controlador.agregarMedico(nombre, especialidad, telefono, email, direccion);
+    }
+
+    public void MostrarMenuMedico(){
+        String opcion = "";
+        while(!"3".equals(opcion)){
+            System.out.println("\n--- Menú de Médicos ---");
+            System.out.println("1. Listado de Médicos");
+            System.out.println("2. Añadir Médico");
+            System.out.println("3. Salir");
+            System.out.print("Ingrese una opción: ");
+            opcion = scanner.nextLine();
+
+            if("1".equals(opcion)){
+                listarMedicos();
+            } else if ("2".equals(opcion)) {
+                añadirMedico();
+            } else if ("3".equals(opcion)) {
+                System.out.println("Saliendo del menú de médicos...");
+            } else {
+                System.out.println("Opción inválida. Intente de nuevo.");
+            }
+        }
+    }
+    
 }

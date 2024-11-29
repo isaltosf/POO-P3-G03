@@ -1,8 +1,8 @@
 package espol.edu.ec;
 
-import java.util.*;
 import espol.edu.ec.vista.*;
 import espol.edu.ec.controlador.*;
+
 
 public class Main {
     public static void main(String[] args) {
