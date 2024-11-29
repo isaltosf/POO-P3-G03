@@ -2,7 +2,7 @@ package espol.edu.ec.controlador;
 
 import java.util.*;
 import espol.edu.ec.modelo.Medico;
-import espol.edu.ec.vista.*;
+
 public class MedicoControlador {
     private ArrayList<Medico> medicos;
 
@@ -17,7 +17,7 @@ public class MedicoControlador {
         System.out.println("Médico añadido exitosamente.");
     }
 
-    public List<Medico> listarMedicos() {
+    public ArrayList<Medico> listarMedicos() {
         return medicos; // Devuelve la lista de médicos registrados
     }
 }

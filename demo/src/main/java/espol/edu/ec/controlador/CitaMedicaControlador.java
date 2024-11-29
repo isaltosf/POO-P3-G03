@@ -20,4 +20,8 @@ public class CitaMedicaControlador {
         lsCitasMedicas.add(new CitaMedica(titulo, doctor, doctor));
         System.out.println("Cita médica añadida exitosamente. ");
     }
+
+    public ArrayList<CitaMedica> getCitaMedicas(){
+        return lsCitasMedicas;
+    }
 }

@@ -1,14 +1,9 @@
 package espol.edu.ec.controlador;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.List;
 import espol.edu.ec.modelo.ActividadFisica;
 
 public class ActividadFisicaControlador {
-    private List<ActividadFisica> lstacActividadFisicas;
+    private ArrayList<ActividadFisica> lstacActividadFisicas;
 
     public ActividadFisicaControlador() {
         lstacActividadFisicas = new ArrayList<>();
@@ -24,7 +19,7 @@ public class ActividadFisicaControlador {
 
     }
 
-    public List<ActividadFisica> getActividadesOrdenadas(){
+    public ArrayList<ActividadFisica> getActividadesOrdenadas(){
         return lstacActividadFisicas;
     }
 }

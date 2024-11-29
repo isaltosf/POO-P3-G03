@@ -1,9 +1,9 @@
 package espol.edu.ec.controlador;
 
-import java.lang.reflect.Array;
+
 import java.util.*;
 import espol.edu.ec.modelo.*;
-import espol.edu.ec.vista.*;
+
 public class MedicamentoControlador {
     private ArrayList<Medicamento> medicamentos;
 
